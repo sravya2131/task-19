@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoverable Sidenav Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .sidenav {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      background-color: #575757;
+    }
+
+    .hover-btns {
+      position: fixed;
+      top: 60px;
+      left: 0;
+    }
+
+    .hover-btn {
+      height: 50px;
+      width: 50px;
+      margin-bottom: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .green { background-color: #04AA6D; }
+    .blue { background-color: #2196F3; }
+    .red { background-color: #f44336; }
+    .gray { background-color: #555; }
+
+    .hover-btn:hover + .sidenav {
+      width: 250px;
+    }
+
+    .content {
+      margin-left: 60px;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="hover-btns">
+  <div class="hover-btn green"></div>
+  <div class="hover-btn blue"></div>
+  <div class="hover-btn red"></div>
+  <div class="hover-btn gray"></div>
+</div>
+
+<div class="sidenav" id="sidenav1">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+</div>
+
+<div class="content">
+  <h2>Hoverable Sidenav Buttons</h2>
+  <p>Hover over the buttons in the left side navigation to open them.</p>
+</div>
+
+</body>
+</html>
